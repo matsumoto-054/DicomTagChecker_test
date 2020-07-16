@@ -14,17 +14,18 @@
             Text="監視対象フォルダ："
             Height="25"
             Width="105"
-            Margin="35,25,460,20" />
+            Margin="15,22,440,22" />
         <TextBox
-            x:Name="FolderPathtextBox"
-            Text="{Binding FolderPath.value}"
+            x:Name="FolderPathTextBox"
+            Text="{Binding FolderPath.value, UpdateSourceTrigger=PropertyChanged, TargetNullValue=''}"
             Height="25"
-            Width="380"
+            Width="370"
             TextWrapping="NoWrap"
             Margin="80,18,0,18" />
         <Button
             x:Name="SelectFolderButton"
-            Command="{Binding SelectFolderButton}"
+            Command="{Binding Path=SelectFolderButton}"
+            CommandParameter="{Binding ElementName=FolderPathTextBox}"
             Content="..."
             Height="20"
             Width="25"

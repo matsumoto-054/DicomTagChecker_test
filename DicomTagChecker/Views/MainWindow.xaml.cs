@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using DicomTagChecker.ViewModels;
+using System.Windows;
 
 namespace DicomTagChecker.Views
 {
@@ -10,6 +11,8 @@ namespace DicomTagChecker.Views
         public MainWindow()
         {
             InitializeComponent();
+
+            DataContext = new MainWindowViewModel();
         }
     }
 }
