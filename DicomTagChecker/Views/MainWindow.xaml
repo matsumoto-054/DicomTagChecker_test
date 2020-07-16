@@ -37,8 +37,8 @@
             Height="20"
             Width="40"
             Margin="10,0,500,235" />
-        <ListBox
-            x:Name="LogListBox"
+        <ListView
+            x:Name="LogListView"
             Grid.Row="1"
             Height="160"
             Width="530"
@@ -66,7 +66,7 @@
             VerticalAlignment="Bottom">
             <Label
                 Name="StatusBarLabel"
-                Content="test" />
+                Content="{Binding Status}" />
         </StatusBar>
     </Grid>
 </Window>
